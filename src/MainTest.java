@@ -31,6 +31,13 @@ class MainTest {
         Assertions.assertEquals("(0, 0, 0) - W", lunarCraft.printCoordinatesAndDirection());
     }
 
+    @Test
+    public void testRightTurnCoordinates() {
+        Chandrayaan3  lunarCraft= new Chandrayaan3();
+        lunarCraft.runsCommands(new char[]{'r'});
+        Assertions.assertEquals("(0, 0, 0) - E", lunarCraft.printCoordinatesAndDirection());
+    }
+
 
 
 
