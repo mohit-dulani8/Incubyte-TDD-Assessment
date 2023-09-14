@@ -9,4 +9,11 @@ class MainTest {
         Chandrayaan3  lunarCraft= new Chandrayaan3();
         Assertions.assertEquals("(0, 0, 0) - N", lunarCraft.printCoordinatesAndDirection());
     }
+
+    @Test
+    public void testForwardCoordinates() {
+        Chandrayaan3  lunarCraft= new Chandrayaan3();
+        lunarCraft.runsCommands(new char[]{'f'});
+        Assertions.assertEquals("(0, 1, 0) - N", lunarCraft.printCoordinatesAndDirection());
+    }
 }
