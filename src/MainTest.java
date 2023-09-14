@@ -73,5 +73,12 @@ class MainTest {
         Assertions.assertEquals("(2, 0, 0) - N", lunarCraft.printCoordinatesAndDirection());
     }
 
+    @Test
+    public void generalTest3() {
+        Chandrayaan3  lunarCraft= new Chandrayaan3();
+        lunarCraft.runsCommands(new char[]{'l','l','l'});
+        Assertions.assertEquals("(0, 0, 0) - E", lunarCraft.printCoordinatesAndDirection());
+    }
+
 
 }
