@@ -125,11 +125,11 @@ public class Chandrayaan3 {
         }
     }
     public void MoveUp() {
-        direction = 'u';
+        direction = 'U';
     }
 
     public void MoveDown() {
-        direction = 'd';
+        direction = 'D';
     }
 
     public static void main (String[]args){

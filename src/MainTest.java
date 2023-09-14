@@ -42,14 +42,21 @@ class MainTest {
     public void testMoveUpCoordinates() {
         Chandrayaan3  lunarCraft= new Chandrayaan3();
         lunarCraft.runsCommands(new char[]{'u'});
-        Assertions.assertEquals("(0, 0, 0) - u", lunarCraft.printCoordinatesAndDirection());
+        Assertions.assertEquals("(0, 0, 0) - U", lunarCraft.printCoordinatesAndDirection());
     }
 
     @Test
     public void testMoveDownCoordinates() {
         Chandrayaan3  lunarCraft= new Chandrayaan3();
         lunarCraft.runsCommands(new char[]{'d'});
-        Assertions.assertEquals("(0, 0, 0) - d", lunarCraft.printCoordinatesAndDirection());
+        Assertions.assertEquals("(0, 0, 0) - D", lunarCraft.printCoordinatesAndDirection());
+    }
+
+    @Test
+    public void testGivenInput() {
+        Chandrayaan3  lunarCraft= new Chandrayaan3();
+        lunarCraft.runsCommands(new char[]{'f','r','u','b','l'});
+        Assertions.assertEquals("(0, 1, -1) - N", lunarCraft.printCoordinatesAndDirection());
     }
 
 }
