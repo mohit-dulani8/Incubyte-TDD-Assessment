@@ -80,5 +80,4 @@ class MainTest {
         Assertions.assertEquals("(0, 0, 0) - E", lunarCraft.printCoordinatesAndDirection());
     }
 
-
 }
