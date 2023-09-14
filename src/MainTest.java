@@ -59,4 +59,11 @@ class MainTest {
         Assertions.assertEquals("(0, 1, -1) - N", lunarCraft.printCoordinatesAndDirection());
     }
 
+    @Test
+    public void generalTest1() {
+        Chandrayaan3  lunarCraft= new Chandrayaan3();
+        lunarCraft.runsCommands(new char[]{'f','r','r','b','f','f'});
+        Assertions.assertEquals("(0, 0, 0) - S", lunarCraft.printCoordinatesAndDirection());
+    }
+
 }
