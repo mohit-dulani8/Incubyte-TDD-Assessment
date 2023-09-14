@@ -3,6 +3,7 @@ public class Chandrayaan3 {
     private int y;
     private int z;
     private char direction;  // N, S, E, W, U, D
+    private char alternate_direction;
 
 
     public String printCoordinatesAndDirection() {
@@ -92,44 +93,90 @@ public class Chandrayaan3 {
     }
 
     public void turnLeft() {
-        switch (direction) {
-            case 'N':
-                direction = 'W';
-                break;
-            case 'S':
-                direction = 'E';
-                break;
-            case 'E':
-                direction = 'N';
-                break;
-            case 'W':
-                direction = 'S';
-                break;
+        if(direction=='U'||direction=='D'){
+            switch (alternate_direction){
+                case 'N':
+                    direction = 'W';
+                    break;
+                case 'S':
+                    direction = 'E';
+                    break;
+                case 'E':
+                    direction = 'N';
+                    break;
+                case 'W':
+                    direction = 'S';
+                    break;
+            }
+        }
+        else{
+            switch (direction) {
+                case 'N':
+                    direction = 'W';
+                    break;
+                case 'S':
+                    direction = 'E';
+                    break;
+                case 'E':
+                    direction = 'N';
+                    break;
+                case 'W':
+                    direction = 'S';
+                    break;
+            }
         }
     }
 
     public void turnRight() {
-        switch (direction) {
-            case 'N':
-                direction = 'E';
-                break;
-            case 'S':
-                direction = 'W';
-                break;
-            case 'E':
-                direction = 'S';
-                break;
-            case 'W':
-                direction = 'N';
-                break;
+        if(direction=='U'||direction=='D'){
+            switch (alternate_direction){
+                case 'N':
+                    direction = 'E';
+                    break;
+                case 'S':
+                    direction = 'W';
+                    break;
+                case 'E':
+                    direction = 'S';
+                    break;
+                case 'W':
+                    direction = 'N';
+                    break;
+            }
+        }
+        else {
+            switch (direction) {
+                case 'N':
+                    direction = 'E';
+                    break;
+                case 'S':
+                    direction = 'W';
+                    break;
+                case 'E':
+                    direction = 'S';
+                    break;
+                case 'W':
+                    direction = 'N';
+                    break;
+            }
         }
     }
     public void MoveUp() {
-        direction = 'U';
+        if(direction!='U'){
+            alternate_direction=direction;
+        }
+        if (direction == 'N' || direction == 'S'||direction == 'E'||direction == 'W' || direction =='D') {
+            direction = 'U';
+        }
     }
 
     public void MoveDown() {
-        direction = 'D';
+        if(direction!='U'){
+            alternate_direction=direction;
+        }
+        if (direction == 'N' || direction == 'S' || direction == 'E' || direction == 'W' || direction =='D') {
+            direction = 'D';
+        }
     }
 
     public static void main (String[]args){
