@@ -36,6 +36,9 @@ public class Chandrayaan3 {
             case 'r':
                 turnRight();
                 break;
+            case 'u':
+                MoveUp();
+                break;
 
         }
     }
@@ -118,6 +121,9 @@ public class Chandrayaan3 {
                 direction = 'N';
                 break;
         }
+    }
+    public void MoveUp() {
+        direction = 'u';
     }
 
     public static void main (String[]args){
