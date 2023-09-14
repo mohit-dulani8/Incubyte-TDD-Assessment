@@ -30,6 +30,10 @@ public class Chandrayaan3 {
             case 'b':
                 moveBackward();
                 break;
+            case 'l':
+                turnLeft();
+                break;
+
         }
     }
 
@@ -78,6 +82,24 @@ public class Chandrayaan3 {
                 break;
         }
     }
+
+    public void turnLeft() {
+        switch (direction) {
+            case 'N':
+                direction = 'W';
+                break;
+            case 'S':
+                direction = 'E';
+                break;
+            case 'E':
+                direction = 'N';
+                break;
+            case 'W':
+                direction = 'S';
+                break;
+        }
+    }
+
     public static void main (String[]args){
         Chandrayaan3 lunarCraft = new Chandrayaan3();
         System.out.println("Initial Position: " + lunarCraft.printCoordinatesAndDirection());
