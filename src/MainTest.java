@@ -16,4 +16,13 @@ class MainTest {
         lunarCraft.runsCommands(new char[]{'f'});
         Assertions.assertEquals("(0, 1, 0) - N", lunarCraft.printCoordinatesAndDirection());
     }
+
+    @Test
+    public void testBackwardCoordinates() {
+        Chandrayaan3  lunarCraft= new Chandrayaan3();
+        lunarCraft.runsCommands(new char[]{'b'});
+        Assertions.assertEquals("(0, -1, 0) - N", lunarCraft.printCoordinatesAndDirection());
+    }
+
+
 }

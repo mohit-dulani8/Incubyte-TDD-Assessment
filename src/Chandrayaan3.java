@@ -27,6 +27,9 @@ public class Chandrayaan3 {
             case 'f':
                 moveForward();
                 break;
+            case 'b':
+                moveBackward();
+                break;
         }
     }
 
@@ -52,12 +55,35 @@ public class Chandrayaan3 {
                 break;
         }
     }
-        public static void main (String[]args){
-            Chandrayaan3 lunarCraft = new Chandrayaan3();
-            System.out.println("Initial Position: " + lunarCraft.printCoordinatesAndDirection());
 
-            // Print the final position and direction
-            System.out.println("Final Position: " + lunarCraft.printCoordinatesAndDirection());
+    public void moveBackward() {
+        switch (direction) {
+            case 'N':
+                y--;
+                break;
+            case 'S':
+                y++;
+                break;
+            case 'E':
+                x--;
+                break;
+            case 'W':
+                x++;
+                break;
+            case 'U':
+                z--;
+                break;
+            case 'D':
+                z++;
+                break;
+        }
+    }
+    public static void main (String[]args){
+        Chandrayaan3 lunarCraft = new Chandrayaan3();
+        System.out.println("Initial Position: " + lunarCraft.printCoordinatesAndDirection());
+
+        // Print the final Co-ordinates and direction
+        System.out.println("Final Position: " + lunarCraft.printCoordinatesAndDirection());
 
         }
     }
