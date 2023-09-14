@@ -45,4 +45,11 @@ class MainTest {
         Assertions.assertEquals("(0, 0, 0) - u", lunarCraft.printCoordinatesAndDirection());
     }
 
+    @Test
+    public void testMoveDownCoordinates() {
+        Chandrayaan3  lunarCraft= new Chandrayaan3();
+        lunarCraft.runsCommands(new char[]{'d'});
+        Assertions.assertEquals("(0, 0, 0) - d", lunarCraft.printCoordinatesAndDirection());
+    }
+
 }

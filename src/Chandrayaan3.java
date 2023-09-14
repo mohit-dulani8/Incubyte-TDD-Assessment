@@ -39,7 +39,9 @@ public class Chandrayaan3 {
             case 'u':
                 MoveUp();
                 break;
-
+            case 'd':
+                MoveDown();
+                break;
         }
     }
 
@@ -124,6 +126,10 @@ public class Chandrayaan3 {
     }
     public void MoveUp() {
         direction = 'u';
+    }
+
+    public void MoveDown() {
+        direction = 'd';
     }
 
     public static void main (String[]args){
